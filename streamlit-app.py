@@ -11,7 +11,7 @@ def load_model(model="en_core_web_sm"):
     try:
          nlp = spacy.load(model)
     except Exception:
-        pass
+        spacy.cli.download(model)
     # Loading the model
     nlp = spacy.load(model)
     blank = spacy.blank("en")
