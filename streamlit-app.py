@@ -21,7 +21,20 @@ def load_model(model="en_core_web_sm"):
 
 nlp, blank = load_model()
 
-st.title("spaCyEx Demo")
+st.image("https://github.com/wjbmattingly/spacyex/blob/main/images/spacyex-logo.png?raw=true")
+
+st.markdown("""
+[![PyPI version](https://badge.fury.io/py/spacyex.svg)](https://pypi.org/project/spacyex/)
+[![GitHub stars](https://img.shields.io/github/stars/wjbmattingly/spacyex.svg?style=social&label=Star&maxAge=2592000)](https://github.com/wjbmattingly/spacyex/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/wjbmattingly/spacyex.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/wjbmattingly/spacyex/network)
+""")
+
+st.markdown("""
+    <a href="https://github.com/wjbmattingly/spacyex/tree/main" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="30" height="30" style="vertical-align:bottom"/>
+        Check it out on GitHub!
+    </a><br><br>""", unsafe_allow_html=True)
+
 
 pattern = st.text_input("Type Pattern", "(ent_type=PERSON) (lemma=in[run,walk]) (pos=in[ADV,ADJ])")
 col1, col2 = st.columns(2)
